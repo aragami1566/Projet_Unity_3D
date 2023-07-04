@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
 
 public class CountDownTimer : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class CountDownTimer : MonoBehaviour
     {
         StartCoroutine(CountdownToStart());
     }
+
 
     // Update is called once per frame
 
@@ -28,11 +31,10 @@ public class CountDownTimer : MonoBehaviour
 
             if (countdownTime == 0)
             {
+               
                 countdownDisplay.color = Color.red;
                 countdownDisplay.text = "Le temps est ecoule !";
-            }
+            }  
         }
-
-      
     }
 }
